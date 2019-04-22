@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GA Cushen on Mark Edosa</title>
+    <link>/authors/ga-cushen/</link>
+    <description>Recent content in GA Cushen on Mark Edosa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Sep 2015 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="/authors/ga-cushen/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Person Re-Identification System For Mobile Devices</title>
+      <link>/publication/person-re-id/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0100</pubDate>
+      
+      <guid>/publication/person-re-id/</guid>
+      <description>More detail can easily be written here using Markdown and $\rm \LaTeX$ math code.</description>
+    </item>
+    
+    <item>
+      <title>Mobile visual clothing search</title>
+      <link>/publication/clothing-search/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0100</pubDate>
+      
+      <guid>/publication/clothing-search/</guid>
+      <description>A mobile visual clothing search system is presented whereby a smart phone user can either choose a social networking image or capture a new photo of a person wearing clothing of interest and search for similar clothing in a large cloud-based ecommerce database. The phone&amp;rsquo;s GPS location is used to re-rank results by retail store location, to inform the user of local stores where similar clothing items can be tried on.</description>
+    </item>
+    
+  </channel>
+</rss>
