@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en-us"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="generator" content="Source Themes Academic 4.2.5"><meta name="author" content="Mark Edosa"><meta name="description" content="Git is a version control system (VCS) that is very useful for tracking content in files.
+Description It has three areas:
+ The working directory (working tree) - contains your files The staging area (or index) - a temporary storage for changes your files the repository - a somewhat permanent store for your files  The workflow:
+ Initialize an empty git repository if it&rsquo;s a new project or clone an existing repository Make changes to the content of files / create new files Add files to the index Commit the changes to the local repository And Optionally push to a remote repository hosted via sites such as github, bitbucket etc."><link rel="alternate" hreflang="en-us" href="https://maqui7295.github.io/tutorial/git/"><meta name="theme-color" content="#3f51b5"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css" crossorigin="anonymous" title="hl-light"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css" crossorigin="anonymous" title="hl-dark" disabled="disabled"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono"><link rel="stylesheet" href="/styles.css"><link rel="manifest" href="/site.webmanifest"><link rel="icon" type="image/png" href="/img/icon.png"><link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png"><link rel="canonical" href="https://maqui7295.github.io/tutorial/git/"><meta property="twitter:card" content="summary"><meta property="twitter:site" content="@ed_macqui"><meta property="twitter:creator" content="@ed_macqui"><meta property="og:site_name" content="Mark Edosa"><meta property="og:url" content="https://maqui7295.github.io/tutorial/git/"><meta property="og:title" content="Working with git | Mark Edosa"><meta property="og:description" content="Git is a version control system (VCS) that is very useful for tracking content in files.
+Description It has three areas:
+ The working directory (working tree) - contains your files The staging area (or index) - a temporary storage for changes your files the repository - a somewhat permanent store for your files  The workflow:
+ Initialize an empty git repository if it&rsquo;s a new project or clone an existing repository Make changes to the content of files / create new files Add files to the index Commit the changes to the local repository And Optionally push to a remote repository hosted via sites such as github, bitbucket etc."><meta property="og:image" content="https://maqui7295.github.io/img/icon-192.png"><meta property="og:locale" content="en-us"><meta property="article:published_time" content="2018-09-09T00:00:00&#43;01:00"><meta property="article:modified_time" content="2019-05-23T14:41:45&#43;01:00"><title>Working with git | Mark Edosa</title></head><body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71"><aside class="search-results" id="search"><div class="container"><section class="search-header"><div class="row no-gutters justify-content-between mb-3"><div class="col-6"><h1>Search</h1></div><div class="col-6 col-search-close"><a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a></div></div><div id="search-box"><input name="q" id="search-query" placeholder="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search"></div></section><section class="section-search-results"><div id="search-hits"></div></section></div></aside><nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main"><div class="container"><a class="navbar-brand" href="/">Mark Edosa</a> <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span><i class="fas fa-bars"></i></span></button><div class="collapse navbar-collapse" id="navbar"><ul class="navbar-nav mr-auto"><li class="nav-item"><a class="nav-link" href="/#about"><span>Home</span></a></li><li class="nav-item"><a class="nav-link" href="/#posts"><span>Posts</span></a></li><li class="nav-item"><a class="nav-link" href="/#projects"><span>Projects</span></a></li><li class="nav-item"><a class="nav-link" href="/tutorial/"><span>Tutorials</span></a></li><li class="nav-item"><a class="nav-link" href="/#contact"><span>Contact</span></a></li></ul><ul class="navbar-nav ml-auto"><li class="nav-item"><a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a></li><li class="nav-item"><a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a></li></ul></div></div></nav><div class="container-fluid docs"><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 docs-sidebar"><form class="docs-search d-flex align-items-center"><button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation"><span><i class="fas fa-bars"></i></span></button> <input name="q" type="search" class="form-control" id="search-query" placeholder="Search..." autocomplete="off"></form><nav class="collapse docs-links" id="docs-nav"><div class="docs-toc-item"><a class="docs-toc-link" href="/tutorial/">Overview</a></div><div class="docs-toc-item"><a class="docs-toc-link" href="/tutorial/git/">Command Line</a><ul class="nav docs-sidenav"><li class="active"><a href="/tutorial/git/">git</a></li><li><a href="/tutorial/npm/">npm</a></li></ul></div></nav></div><div class="d-none d-xl-block col-xl-2 docs-toc"><p class="docs-toc-title">On this page</p><nav id="TableOfContents"><ul><li><ul><li><a href="#description">Description</a></li><li><a href="#installing-git">Installing git</a></li><li><a href="#getting-help">Getting help</a></li><li><a href="#configuration">Configuration</a></li><li><a href="#starting-a-new-project">Starting a new project</a></li><li><a href="#pushing-to-github">Pushing to github</a></li><li><a href="#generating-ssh-keys">Generating ssh keys</a></li><li><a href="#making-and-removing-changes-tracking-files">Making and removing changes (Tracking files)</a></li><li><a href="#viewing-the-project-history">Viewing the project history</a></li><li><a href="#working-with-branches">Working with branches</a></li><li><a href="#rebasing">Rebasing</a><ul><li><a href="#choosing-between-rebasing-and-merging">Choosing between rebasing and merging</a></li></ul></li><li><a href="#checking-out-a-commit-detaching-the-head-pointer">checking out a commit/ detaching the head (pointer)</a></li><li><a href="#navigating-directories">Navigating directories</a></li><li><a href="#git-tags">Git tags</a></li><li><a href="#contributing-to-projects-on-github">Contributing to projects on Github</a></li><li><a href="#miscellaneous">Miscellaneous</a></li></ul></li></ul></nav><ul class="nav toc-top"><li><a href="#">Back to top</a></li></ul></div><main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main"><article class="article" itemscope itemtype="http://schema.org/Article"><div class="docs-article-container"><h1 itemprop="name">Working with git</h1><div class="article-style" itemprop="articleBody"><p>Git is a version control system (VCS) that is very useful for tracking content in files.</p><h2 id="description">Description</h2><p>It has three areas:</p><ol><li>The <code>working directory</code> (working tree) - contains your files</li><li>The <code>staging area</code> (or index) - a temporary storage for changes your files</li><li>the <code>repository</code> - a somewhat permanent store for your files</li></ol><p>The workflow:</p><ul><li><strong>Initialize</strong> an empty git repository if it&rsquo;s a new project or clone an existing repository</li><li>Make changes to the content of files / create new files</li><li>Add files to the index</li><li><strong>Commit</strong> the changes to the local repository</li><li>And Optionally push to a remote repository hosted via sites such as github, bitbucket etc.</li></ul><p>This tutorial provides quick methods for working with git:</p><h2 id="installing-git">Installing git</h2><ul><li>You can download and install git from <a href="https://git-scm.com/downloads" target="_blank">here</a></li><li>Also, you can download a gui client for git from <a href="https://git-scm.com/downloads/guis" target="_blank">here</a></li></ul><h2 id="getting-help">Getting help</h2><pre><code class="language-sh">git help  
+git help -a  # lists the Porcelain(low level) commands
+git help -g  # lists the common git guides e.g git help tutorial
+
+# this opens up the documentation for the command in the default browser of your machine
+git help &lt;command | concept&gt; # e.g. git help init
+
+# useful tutorials
+git help everyday  
+git help tutorial
+</code></pre><h2 id="configuration">Configuration</h2><pre><code class="language-sh">git config --list # see all initial configurations in a local git repository
+git config --list --global # see all initial configurations
+
+# set global username and email
+git config --global user.name &quot;your username&quot;
+git config --global user.email youremail@something.com
+
+# set local or per git directory username and email
+git config user.name &quot;your username&quot;
+git config user.email youremail@something.com
+
+</code></pre><h2 id="starting-a-new-project">Starting a new project</h2><p>On the working or root directory of the project, run the following commands:</p><pre><code class="language-sh">git init  # initialize a git repositot=ry
+git add filename1            # add a single file to the staging area
+git add filename1 filename2  # add multiple files to the staging area
+git add .                    # add all untracked files to the staging area
+git commit -m &quot;the message to describe the commit&quot;
+</code></pre><div class="alert alert-note"><div><p>To ignore files or folders, create a gitignore file</p><pre><code>touch .gitignore
+</code></pre><p>then add the files or folders you don&rsquo;t want git to track in the .gitignore file</p></div></div><h2 id="pushing-to-github">Pushing to github</h2><ol><li>Create a new repository on <a href="https://github.com" target="_blank">github</a></li><li><p>At the project root i.e. the working directory, run:</p><pre><code>git remote add origin url_of_repo
+</code></pre></li><li><p>Make changes, add them to the index and commit them</p></li><li><p>Run the command:</p><pre><code>    git push -u origin master
+</code></pre></li></ol><div class="alert alert-note"><div>The above &ldquo;push&rdquo; requires the use of password. A more secure option is the use of ssh</div></div><h2 id="generating-ssh-keys">Generating ssh keys</h2><p>a. run</p><pre><code class="language-sh"> ssh-keygen -t rsa -b 4096 -C &quot;example@mail.com&quot; 
+</code></pre><p>Follow the prompt and make sure you write down the passphrase you used. At the end you should see a message similar to the one below:</p><blockquote><p>Your identification has been saved in /c/Users/YourUsername/.ssh/id_rsa. Your public key has been saved in /c/Users/YourUsername/.ssh/id_rsa.pub. The key fingerprint is: a-very-long-text-hashed-text</p></blockquote><p>b. Confirm that the ssh agent is running</p><pre><code class="language-sh">    eval &quot;$(ssh-agent -s)&quot;  # prints out Agent pid process_id
+</code></pre><p>c. Add the generated key to the ssh</p><pre><code class="language-sh">    ssh-add ~/.ssh/id_rsa
+</code></pre><p>d. Registering the key on github</p><ul><li>go to settings on github</li><li>click SSH and GPG keys</li><li>click new SSH key</li><li>give a title</li><li>copy the ssh key from your device and paste in the box provided</li></ul><div class="alert alert-note"><div><ul><li>for Mac users: <code>pbcopy &lt; ~/.ssh/id_rsa.pub</code> (copies to the clipboard)</li><li>for windows: <code>clip &lt; ~/.ssh/id_rsa.pub</code></li></ul></div></div><div class="alert alert-warning"><div>Remember to delete the ssh key on github if you sell or lose your pc</div></div><h2 id="making-and-removing-changes-tracking-files">Making and removing changes (Tracking files)</h2><pre><code class="language-sh"># view the changes made to the content of files in the working directory
+git diff
+
+# view the changes between the working directory and the staged area (index)
+git diff --cached
+
+# unstaging files / removing changes from the index
+git rm --cached file      # unstage the file (untrack the file)
+git rm --cached . -r      # unstaged all staged files
+git reset HEAD test.js    # unstaged a file
+
+# delete file
+git rm file
+
+# Resetting
+git reset --soft    # move changes from .git to the staging area
+git reset --mixed   # untrack (unstage) tracked files (default action)
+git reset --hard    # Discard changes to tracked files in the working tree since last commit
+</code></pre><h2 id="viewing-the-project-history">Viewing the project history</h2><pre><code class="language-sh">git status         # know the current status
+git status -s      # a shorter status
+git log            #  to see all your commits history
+git log -n         # see a particular number n of commits
+git log --oneline  # each commit is printed on a single line
+git log --stat     # get some statistics
+git log --stat --summary
+git log --patch # get full details of exact changes made
+</code></pre><div class="alert alert-note"><div>Press q to exit the log console after reading the logs</div></div><h2 id="working-with-branches">Working with branches</h2><p>A branch is just a reference to a commit (stored in the refs folder in the .git directory).</p><ul><li><p>List branches</p><pre><code>git branch        # local only
+git branch -r     # remote only
+git branch --all  # all branches
+</code></pre></li><li><p>Create new branch</p><pre><code>git branch new-branch   # create new branch
+git checkout -b new_branch # create and checkout new branch
+</code></pre></li><li><p>Switch to new branch git checkout branchname</p></li><li><p>Delete branch</p><pre><code>git -d branchname
+</code></pre></li><li><p>Merge branches</p><pre><code>git merge other_branch
+git help merge # for more information
+
+git pull  # fetch and merge a remote branch with the local one
+
+git push  # merge the local branch with the remote branch
+</code></pre></li></ul><h2 id="rebasing">Rebasing</h2><p>This is another way of merging branches. but unlike <code>git merge</code> which produces a merged with 2 parents, rebase gives the two branches a common base hence the merged file has a single parent.</p><pre><code>git checkout branchname (if not already in branch)
+git rebase new_branch
+</code></pre><h3 id="choosing-between-rebasing-and-merging">Choosing between rebasing and merging</h3><ul><li><code>Merging</code> preserves history hence it is always truthful about the state of changes made to a file over time.</li><li>However the history to track might be cumbersome especially in a large project that involved a lot of merges.</li><li><code>Rebasing</code> does not preserve history hence does not have the above problem</li><li>however it lies since history is not preserved.</li></ul><div class="alert alert-warning"><div>When in doubt, just merge. Never rebase shared commits</div></div><div class="alert alert-note"><div><p>How does git know the current branch? cat .git/HEAD # contains a reference to the current branch</p><pre><code>cat .git/refs/heads/master   # returns the sha1sum of the current commit
+
+git show-ref branchname     # list the references or pointers to a branch
+</code></pre></div></div><h2 id="checking-out-a-commit-detaching-the-head-pointer">checking out a commit/ detaching the head (pointer)</h2><p>Detaching the head <strong>(switching into a commit)</strong> is useful for experimentation with your code.</p><pre><code>    git checkout sha1sum_of_commit
+</code></pre><p>Then do all you would normally: change files, add and commit them. Optionally, after changes are made to the commit you can put a branch on the commit by running</p><pre><code>    git branch newbranch_for_commit
+</code></pre><p>If you do not do this, the git garbage collector will remove the changes after some time</p><h2 id="navigating-directories">Navigating directories</h2><ul><li><p>List the content of the directory</p><pre><code>ls
+ls -a
+ls -al
+</code></pre></li><li><p>Change directory</p><pre><code>cd
+cd name_of_directory
+</code></pre></li><li><p>Make directories and files</p><pre><code>mkdir dirname                  # make a directory
+touch filename                 # creates a new file
+cp oldfilename newfilename      # copy a file
+mv oldfilename newfilename     # rename oldfilename to newfilename
+git mv filename1 filename2     # if in same dir, rename a file)
+</code></pre></li></ul><h2 id="git-tags">Git tags</h2><p>A tag is a reference to an object/commit/branch. Tags are useful for marking the current point in a project history.</p><p>Types:</p><ol><li><p>annotated tags</p><pre><code>    git tag -a tagname
+</code></pre></li><li><p>no specific name usually called <code>non-annotated</code> or <code>lightweight</code> tags</p><pre><code>    git tag tagname
+</code></pre></li></ol><h2 id="contributing-to-projects-on-github">Contributing to projects on Github</h2><ul><li><code>Fork</code> the project (original) to create a forked project. You can explore open source projects at this url <a href="https://github.com/explore" target="_blank">https://github.com/explore</a></li><li><p><code>Clone</code> the forked version (belongs to you) to your local machine (local project).</p><pre><code>git clone repo_url  # public project
+# cloning a private repo
+git clone git@github.com:username/repo.git
+</code></pre></li><li><p><code>Add</code> the original project as a remote url to the local project, local project will then contain two remote branches- the <code>master</code> (forked project) and <code>upstream</code> (original project)</p><pre><code>git remote set-url --add [--push] &lt;name&gt; &lt;newurl&gt;
+</code></pre></li></ul><div class="alert alert-note"><div><ul><li>You cannot put to upstream but can only pull from it.</li><li>On github, you can only request changes to upstream or original project by submitting a &ldquo;pull request&rdquo;</li></ul></div></div><h2 id="miscellaneous">Miscellaneous</h2><p>Print information about a particular commit / tag</p><pre><code>    git cat-file &lt;sha1sum&gt; -t  # sha1sum might be the hash of a file or a commit
+    git cat-file sha1sum -p
+
+    git cat-file mytag -p
+</code></pre><p>Get the number and size of objects in a git repository git count-objects</p></div><div class="article-tags"><a class="badge badge-light" href="/tags/commandline/">commandline</a> <a class="badge badge-light" href="/tags/git/">git</a></div></div><div class="body-footer">Last updated on May 23, 2019</div></article><footer class="site-footer"><p class="powered-by">&copy; Mark Edosa &middot; Powered by the <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.</p></footer></main></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script><script>hljs.initHighlightingOnLoad();</script><script>const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };</script><script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script><script>anchors.add();</script><script id="search-hit-fuse-template" type="text/x-template"><div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script><script src="/js/academic.min.eeda67bb2d1f96265d85659d1edc7a5e.js"></script><script>if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/sw.js").then(swReg => { }).catch(err => {
+            console.error('Service Worker Error', err);
+          });
+        });
+      }</script></body></html>

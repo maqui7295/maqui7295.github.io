@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>npm on Mark Edosa</title>
+    <link>https://maqui7295.github.io/tags/npm/</link>
+    <description>Recent content in npm on Mark Edosa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Mark Edosa</copyright>
+    <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://maqui7295.github.io/tags/npm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Working with NPM</title>
+      <link>https://maqui7295.github.io/tutorial/npm/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0100</pubDate>
+      
+      <guid>https://maqui7295.github.io/tutorial/npm/</guid>
+      <description>Introduction NPM or node package manager is one of tool for managing dependencies of javascript or Nodejs projects.
+Typical workflow of an npm project git clone repo cd directory npm i npm start npm test  Getting help npm -h npm install -h npm help &amp;lt;command&amp;gt; # opens browser to the official help page e.g. npm help install npm help-search &amp;lt;list of words&amp;gt; e.g npm help-search remove npm api-help prune npm info pkg  Setting default configuration npm set init-author-name &amp;quot;name of author&amp;quot; npm set init-license &amp;quot;name of author&amp;quot; npm get init-author-name # delete a config npm config delete init-author-name   ls ~/.</description>
+    </item>
+    
+  </channel>
+</rss>

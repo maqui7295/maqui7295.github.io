@@ -2,24 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Overview on Mark Edosa</title>
-    <link>/tutorial/</link>
+    <link>https://maqui7295.github.io/tutorial/</link>
     <description>Recent content in Overview on Mark Edosa</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; Mark Edosa</copyright>
     <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0100</lastBuildDate>
     
-	<atom:link href="/tutorial/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://maqui7295.github.io/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Example Page</title>
-      <link>/tutorial/example/</link>
+      <title>Working with git</title>
+      <link>https://maqui7295.github.io/tutorial/git/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0100</pubDate>
       
-      <guid>/tutorial/example/</guid>
-      <description>In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:
-Tip 1 &amp;hellip;
-Tip 2 &amp;hellip;</description>
+      <guid>https://maqui7295.github.io/tutorial/git/</guid>
+      <description>Git is a version control system (VCS) that is very useful for tracking content in files.
+Description It has three areas:
+ The working directory (working tree) - contains your files The staging area (or index) - a temporary storage for changes your files the repository - a somewhat permanent store for your files  The workflow:
+ Initialize an empty git repository if it&amp;rsquo;s a new project or clone an existing repository Make changes to the content of files / create new files Add files to the index Commit the changes to the local repository And Optionally push to a remote repository hosted via sites such as github, bitbucket etc.</description>
+    </item>
+    
+    <item>
+      <title>Working with NPM</title>
+      <link>https://maqui7295.github.io/tutorial/npm/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0100</pubDate>
+      
+      <guid>https://maqui7295.github.io/tutorial/npm/</guid>
+      <description>Introduction NPM or node package manager is one of tool for managing dependencies of javascript or Nodejs projects.
+Typical workflow of an npm project git clone repo cd directory npm i npm start npm test  Getting help npm -h npm install -h npm help &amp;lt;command&amp;gt; # opens browser to the official help page e.g. npm help install npm help-search &amp;lt;list of words&amp;gt; e.g npm help-search remove npm api-help prune npm info pkg  Setting default configuration npm set init-author-name &amp;quot;name of author&amp;quot; npm set init-license &amp;quot;name of author&amp;quot; npm get init-author-name # delete a config npm config delete init-author-name   ls ~/.</description>
     </item>
     
   </channel>

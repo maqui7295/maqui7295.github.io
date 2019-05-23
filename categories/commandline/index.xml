@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>commandline on Mark Edosa</title>
+    <link>https://maqui7295.github.io/categories/commandline/</link>
+    <description>Recent content in commandline on Mark Edosa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Mark Edosa</copyright>
+    <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://maqui7295.github.io/categories/commandline/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Working with git</title>
+      <link>https://maqui7295.github.io/tutorial/git/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 +0100</pubDate>
+      
+      <guid>https://maqui7295.github.io/tutorial/git/</guid>
+      <description>Git is a version control system (VCS) that is very useful for tracking content in files.
+Description It has three areas:
+ The working directory (working tree) - contains your files The staging area (or index) - a temporary storage for changes your files the repository - a somewhat permanent store for your files  The workflow:
+ Initialize an empty git repository if it&amp;rsquo;s a new project or clone an existing repository Make changes to the content of files / create new files Add files to the index Commit the changes to the local repository And Optionally push to a remote repository hosted via sites such as github, bitbucket etc.</description>
+    </item>
+    
+  </channel>
+</rss>
