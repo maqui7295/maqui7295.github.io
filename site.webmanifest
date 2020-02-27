@@ -1,5 +1,7 @@
-{
-    "icons": [{
+ {
+    "name": "Mark Edosa",
+	"short_name": "Mark Edosa",
+	"icons": [{
       "src": "img/icon.png",
       "sizes": "32x32",
       "type": "image/png"
